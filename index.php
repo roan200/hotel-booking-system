@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-            <!----------------- to diplay the number of Staffs ----------------------------->
+            <!----------------- to diplay the number of Staffs ---------------------------->
 
                 <div class="col-xl-5 col-md-6 mt-4">
                     <div class="card bg-success text-white mb-4">
