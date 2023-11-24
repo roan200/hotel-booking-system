@@ -31,7 +31,7 @@
                 <div class="col-xl-5 col-md-6 mt-4">
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">
-                        <h3>Total Number of Users </h3>
+                        <h3>Total Number of staffs </h3>
                             <?php
                             require 'config/conn.php';
 
@@ -45,6 +45,30 @@
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
                             <a class="small text-white stretched-link" href="all-staff.php">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>  
+
+            <!----------------- to diplay the number of booking ----------------------------->
+
+            <div class="col-xl-5 col-md-6 mt-4">
+                    <div class="card bg-success text-white mb-4">
+                        <div class="card-body">
+                        <h3>Total booking </h3>
+                            <?php
+                            require 'config/conn.php';
+
+                            $query = "SELECT id FROM booking ORDER BY id  ";
+                            $run_query = mysqli_query($conn, $query);
+
+                            $row = mysqli_num_rows($run_query);
+
+                            echo '<h1>' .$row. '</h1>'
+                            ?>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="all-booking.php">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
