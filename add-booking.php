@@ -1,5 +1,5 @@
-<?php include('includes/header.php'); ?>
-<?php 
+<?php include('includes/header.php');
+
 include('config/conn.php');
 
 if(isset($_POST['submit'])){
@@ -27,9 +27,7 @@ $result = $conn->query($sql);
 		window.location.href = 'add-booking.php';
 		</script>";
 	}
-
 }
-
 ?>
 
 <div class="page-wrapper">
@@ -113,7 +111,4 @@ $result = $conn->query($sql);
 		</div>
 	</div>
 </div>
-
-
-
 <?php include('includes/scripts.php'); ?>
