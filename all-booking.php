@@ -19,62 +19,77 @@
 									<table class="datatable table table-stripped table table-hover table-center mb-0">
 										<thead>
 											<tr>
-												<th>Booking ID</th>
-												<th>Name</th>
+												<th>ID</th>
 												<th>Room Type</th>
-												<th>Total Numbers</th>
+												<th>Name</th>
+												<th>Members</th>
 												<th>Arrival Date</th>
 												<th>Depature Date</th>
-												<th>Contact #</th>
+												<th>Email</th>
 												<th >Actions</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>BKG-0001</td>
-												<td>ssss bbbb</td>
-												<td>Double</td>
-												<td>10</td>
-												<td>22-03-2020</td>
-												<td>23-03-2020</td>
-												<td>09287342364</td>
+											<?php
+											include("config/conn.php");
 
-												<td>
-                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
-                                                        Delete
-                                                    </button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<!-- Modal -->
-								<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="deleteModalLabel">DELETE</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-												</button>
-											</div>
-											<div class="modal-body">
-												delete booking?
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-												<button type="button" class="btn btn-danger">Delete</button>
-											</div>
-										</div>
+											if (isset($_GET['delete_id'])) {
+												$delete_id = $_GET['delete_id'];
+												// Prepare statement to avoid SQL injection
+												$stmt = $conn->prepare("DELETE FROM booking WHERE id = ?");
+												$stmt->bind_param("i", $delete_id); // "i" for integer type
+												$result = $stmt->execute();
+									
+												if ($result) {
+													echo "<script type='text/javascript'>
+													alert('Delete Successful!');
+													window.location = 'all-booking.php';
+												</script>";
+												} else {
+													echo "<p>Error: Could not delete booking.</p>";
+												}
+									
+												$stmt->close();
+											}
+	
+											
+											$sql = "SELECT * FROM booking "; // Assuming you have an 'id' field for each user
+											$result = $conn->query($sql);
+	
+										if ($result->num_rows > 0) 	
+										{
+											// output data of each row
+											while($row = $result->fetch_assoc()) 
+											{
+													echo "<tr>";
+													echo "<td>" . $row['id'] . "</td>";
+													echo "<td>" . $row['room_type'] . "</td>";
+													echo "<td>" . $row['full_name'] . "</td>";
+													echo "<td>" . $row['email'] . "</td>";
+													echo "<td>" . $row['members'] . "</td>";
+													echo "<td>" . $row['check_in'] . "</td>";
+													echo "<td>" . $row['checkout'] . "</td>";
+													echo "<td>";
+													echo "<a href='?delete_id=".$row['id']."' class='btn btn-delete btn-danger' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a></td>";
+													echo "</td>";
+													echo "</tr>";
+											}
+										} else 
+										{
+											echo "<tr><td colspan='8'>No results found</td></tr>"; // Updated colspan to match the number of <th> elements
+										}
+										$conn->close();
+											
+											?>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-	    </div>
-	</div>
-
+			</div>
+		</div>
+	
 
 <?php include('includes/scripts.php'); ?>
