@@ -4,7 +4,7 @@
      <h1 class="mt-3">Admin Dashboard</h1>
     <div class="row">
 
-    <!----------------- to diplay the number of customers -------------------------->
+    <!----------------- to diplay the number of customers ------------------------->
         <div class="col-xl-5 col-md-6 mt-4">
             <div class="card bg-success text-white mb-4">
                 <div class="card-body">
