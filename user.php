@@ -1,5 +1,39 @@
 <?php include('user/user-header.php');?>
 
+<?php
+     include('config/conn.php');
+
+	 if(isset($_POST['submit'])){
+		
+		$room=$_POST['room_type'];
+		$name=$_POST['name'];
+		$email=$_POST['email'];
+		$members=$_POST['members'];
+		$arrival=$_POST['arrival_date'];
+		$departure=$_POST['departure_date'];
+
+		$sql="INSERT INTO booking(room_type,full_name,email,members,check_in,checkout)
+		 VALUES('$room','$name','$email','$members','$arrival','$departure')";
+		 
+		 $result=$conn->query($sql);
+
+		      if($result){
+				     echo"<script>
+					 alert('booking added successfully');
+					 window.location.href='user.php';
+					 </script>";
+			  }
+			  else{
+				    echo"<script>
+					alert('booking unsuccessful');
+					window.location.href='user.php';
+					</script>"
+			  }
+	 }
+	 ?>
+
+<?php include('user/user-header.php');?>
+
     <div class="page-wrapper">
 		<div class="content container-fluid">
 			<div class="page-header">
