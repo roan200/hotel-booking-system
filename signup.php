@@ -14,8 +14,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if($pass == $cpass)
     {
 
-    $register = "INSERT INTO users (full_name, gender, email, username, pass, user_type) 
-                VALUES ('$name',"$gender','$email','$username','$pass','$type')";
+    $register = "INSERT INTO users (full_name, email, username, pass, user_type) 
+                VALUES ('$name','$email','$username','$pass','$type')";
 
     $result = mysqli_query($conn, $register);
 
