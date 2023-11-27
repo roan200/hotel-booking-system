@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $gender = 
+    $gender = $_POST['gender'];
     $username = $_POST["username"];
     $pass = $_POST["password"];
     $cpass = $_POST["confirm_password"];
@@ -14,8 +14,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if($pass == $cpass)
     {
 
-    $register = "INSERT INTO users (full_name, email, username, pass, user_type) 
-                VALUES ('$name','$email','$username','$pass','$type')";
+    $register = "INSERT INTO users (full_name, email,gender, username, pass, user_type) 
+                VALUES ('$name','$email','$gender','$username','$pass','$type')";
 
     $result = mysqli_query($conn, $register);
 
@@ -50,6 +50,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
             <div class="input_box">
                 <input type="email" placeholder="Email Address" name="email" autocomplete="off" required>
+            </div>
+
+            <div class="input_box">
+                <input type="gender" placeholder="Gender" name="gender" autocomplete="off" required>
             </div>
 
             <div class="input_box">
