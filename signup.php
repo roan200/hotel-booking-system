@@ -52,6 +52,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 <input type="email" placeholder="Email Address" name="email" autocomplete="off" required>
             </div>
 
+            <div class="input_box">
+                <input type="gender" placeholder="Gender" name="gender" autocomplete="off" required>
+            </div>
+
             
 
             <div class="input_box">
