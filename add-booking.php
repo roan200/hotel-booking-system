@@ -15,18 +15,12 @@
 							<div class="row formtype mt-3">
                             <div class="col-md-4 mt-3">
 									<div class="form-group">
-										<label><h4>booking id</h4></label>
-										<select class="form-control form-control-lg" id="sel10" name="sellist10">
-											<option>select</option>
-											<option>ooooo</option>
-											<option>eeeee</option>
-                                            <option>ppppp</option>
-										</select>
+										<label><h4>id</h4></label>
 									</div>
 								</div>
 								<div class="col-md-4 mt-3">
 									<div class="form-group">
-										<label><h4>booking id</h4></label>
+										<label><h4>id</h4></label>
 										<select class="form-control form-control-lg" id="sel1" name="sellist1">
 											<option>Select</option>
 											<option>Marybelle Capulo</option>
@@ -95,6 +89,6 @@
 		</div>
 	</div>
 </div>
-//try ra gud
+
 
 <?php include('includes/scripts.php'); ?>

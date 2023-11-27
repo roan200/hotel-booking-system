@@ -19,13 +19,13 @@
 									<table class="datatable table table-stripped table table-hover table-center mb-0">
 										<thead>
 											<tr>
-												<th>Booking ID</th>
+												<th>ID</th>
 												<th>Name</th>
 												<th>Room Type</th>
 												<th>Total Numbers</th>
 												<th>Arrival Date</th>
 												<th>Depature Date</th>
-												<th>Contact #</th>
+												<th>Email</th>
 												<th >Actions</th>
 											</tr>
 										</thead>
