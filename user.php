@@ -88,6 +88,7 @@
 		</div>
 	</div>
 </div>
+test
 
 <?php include('includes/scripts.php'); ?>
 
