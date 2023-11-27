@@ -14,7 +14,7 @@
                             <i class="fa-solid fa-book"></i>
                         </div>
                         Booking
-                        <div class="sb-sidenav-collapse-arrow">
+                        <div class="sb-sidenav-collapse-arrow text-white">
                             <i class="fas fa-angle-down"></i>
                         </div>
                     </a>
@@ -31,13 +31,6 @@
                         </div>
                         Staffs
                     </a>
-
-                    <a class="nav-link text-white" href="#">
-                        <div class="sb-nav-link-icon">
-                            <i class="fa-solid fa-money-bill-1-wave text-white"></i>
-                        </div>
-                        Pricing
-                    </a>    
 
                     <a class="nav-link text-white" href="user-list.php">
                         <div class="sb-nav-link-icon">
