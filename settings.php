@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
 	$password = $_POST['password'];
 
 
-   
+    // Update the user's data
     $sql = "UPDATE users SET full_name='$name', gender='$sex', email='$email', username ='$username', pass ='$password' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
@@ -64,7 +64,7 @@ $conn->close();
 
 						<div class="form-group">
                         <label>Sex</label>
-							<select class="form-control " id="sex" name="sex"  required>
+							<select class="form-control " id="sex" name="sex" required>
 								<option>Select</option>
 								<option value="male">male</option>
 								<option value="female">female</option>
@@ -79,14 +79,14 @@ $conn->close();
 						<div class="form-group">
 						<label>Username</label>
 							<div>
-								<input type="text" class="form-control" id="username" name="username"  required> 
+								<input type="text" class="form-control" id="username" name="username" required> 
 							</div>
 						</div>
 
 						<div class="form-group">
 						<label>Password</label>
 							<div>
-								<input type="text" class="form-control" id="password" name="password"  required> 
+								<input type="text" class="form-control" id="password" name="password" required> 
 							</div>
 						</div>
 

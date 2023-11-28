@@ -14,7 +14,7 @@
 
                     <a class="nav-link text-white" href="#">
                         <div class="sb-nav-link-icon text-white"><i class="fa-solid fa-circle-info"></i></div>
-                      Update Account
+                      Update account
                     </a>
 
                 </div>
