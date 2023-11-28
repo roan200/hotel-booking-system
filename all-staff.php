@@ -10,9 +10,19 @@
                         </div>
 					</div>
 				</div>
-			</div>	
-		</div>
-	</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 mb-4">
+					<form>
+						<div class="col-md-3 ms-auto">
+							<div class="form-group">
+								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    							<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 				<div class="row">
 					<div class="col-sm-12 mt-5">
 						<div class="card card-table">
@@ -57,11 +67,10 @@
 										$sql = "SELECT * FROM staff";
         								$result = $conn->query($sql);
 
-										if ($result->num_rows > 0) 
-										{
+										if ($result->num_rows > 0) {
 											// output data of each row
-											while($row = $result->fetch_assoc()) 
-											{
+											while($row = $result->fetch_assoc()) {
+												
 												echo "<tr>";
 												echo "<td>" . $row['id'] . "</td>";
 												echo "<td>" . $row['staff_id'] . "</td>";
@@ -72,7 +81,7 @@
 												echo "<td>" . $row['role'] . "</td>";
 												echo "<td>" . $row['join_date'] . "</td>";
 												echo "<td>";
-												echo "<a href='update.php?id=".$row['id']."' class='btn btn-update btn-primary'>Update</a> "; // The Update operation would typically be done on a separate page, hence we're using a link to navigate there.
+												echo "<a href='update.php?id=".$row['staff_id']."' class='btn btn-update btn-primary'>Update</a> "; // The Update operation would typically be done on a separate page, hence we're using a link to navigate there.
 												echo "<a href='?delete_id=".$row['staff_id']."' class='btn btn-delete btn-danger' onclick='return confirm(\"Are you sure you want to delete this user?\")'>Delete</a></td>";
 												echo "</td>";
 												echo "</tr>";
