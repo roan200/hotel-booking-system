@@ -1,4 +1,4 @@
-    <div id="layoutSidenav_nav">
+<div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" style = "background-color: #116178" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
