@@ -55,14 +55,14 @@ $conn->close();
 					<div class="card bg-success text-white mb-4">
 
 						<div class="form-group">
-						<label>Full name</label>
+						<label>FULL NAME</label>
 							<div class="cal-icon">
 								<input type="text" class="form-control" id="name" name="name"  required> 
 							</div>
 						</div>
 
 						<div class="form-group">
-                        <label>Sex</label>
+                        <label>SEX</label>
 							<select class="form-control " id="sex" name="sex"  required>
 								<option>Select</option>
 								<option value="male">male</option>
@@ -71,19 +71,19 @@ $conn->close();
 						</div>
 	
 						<div class="form-group">
-						<label>Email</label>
+						<label>EMAIL</label>
 							<input type="text" class="form-control" id="email" name="email" required> 
 						</div>
 								
 						<div class="form-group">
-						<label>Username</label>
+						<label>USERNAME</label>
 							<div>
 								<input type="text" class="form-control" id="username" name="username"  required> 
 							</div>
 						</div>
 
 						<div class="form-group">
-						<label>Password</label>
+						<label>PASSWORD</label>
 							<div>
 								<input type="text" class="form-control" id="password" name="password"  required> 
 							</div>
