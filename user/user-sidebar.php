@@ -9,12 +9,12 @@
 
                     <a class="nav-link text-white" href="settings.php">
                         <div class="sb-nav-link-icon text-white"><i class="fa-solid fa-user "></i></div>
-                        Update account
+                        My Profile
                     </a>
 
                     <a class="nav-link text-white" href="#">
                         <div class="sb-nav-link-icon text-white"><i class="fa-solid fa-circle-info"></i></div>
-                        Account Info
+                      Update Account
                     </a>
 
                 </div>

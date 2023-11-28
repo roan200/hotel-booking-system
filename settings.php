@@ -4,6 +4,7 @@ $id = $_GET['id'];
 include('config/conn.php');
 
 $sql = "SELECT * FROM users WHERE id = $id";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -55,14 +56,14 @@ $conn->close();
 					<div class="card bg-success text-white mb-4">
 
 						<div class="form-group">
-						<label>FULL NAME</label>
+						<label>Full name</label>
 							<div class="cal-icon">
 								<input type="text" class="form-control" id="name" name="name"  required> 
 							</div>
 						</div>
 
 						<div class="form-group">
-                        <label>SEX</label>
+                        <label>Sex</label>
 							<select class="form-control " id="sex" name="sex"  required>
 								<option>Select</option>
 								<option value="male">male</option>
@@ -71,19 +72,19 @@ $conn->close();
 						</div>
 	
 						<div class="form-group">
-						<label>EMAIL</label>
+						<label>Email</label>
 							<input type="text" class="form-control" id="email" name="email" required> 
 						</div>
 								
 						<div class="form-group">
-						<label>USERNAME</label>
+						<label>Username</label>
 							<div>
 								<input type="text" class="form-control" id="username" name="username"  required> 
 							</div>
 						</div>
 
 						<div class="form-group">
-						<label>PASSWORD</label>
+						<label>Password</label>
 							<div>
 								<input type="text" class="form-control" id="password" name="password"  required> 
 							</div>
